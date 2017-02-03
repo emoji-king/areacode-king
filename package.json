@@ -1,0 +1,27 @@
+{
+  "name": "areacode-king",
+  "version": "0.1.0",
+  "description": "World's most advance darea code parser. Parse US area codes to regions.",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "rm -rf lib && mkdir lib && npm run generate",
+    "generate": "./node_modules/.bin/babel-node ./generate.js > lib/areacode-map.js"
+  },
+  "author": "emojikingjs@gmail.com",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emoji-king/areacode-king"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-latest": "^6.22.0",
+    "mz": "^2.6.0",
+    "superagent": "^3.4.1"
+  }
+}
