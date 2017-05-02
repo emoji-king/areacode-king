@@ -7,7 +7,12 @@ function parse(number) {
     number = number.slice(1)
   }
 
-  return areacodemap.long[number.slice(0,6)] || areacodemap.short[number.slice(0,3)]
+  const res = areacodemap.long[number.slice(0,6)] || areacodemap.short[number.slice(0,3)]
+  if (res) {
+    return {region: res.r, location: res.l }
+  } else {
+    return undefined
+  }
 }
 
 module.exports = { parse }

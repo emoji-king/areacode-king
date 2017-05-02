@@ -24,9 +24,9 @@ async function generate(url) {
       delete location.result
 
       if (code.length <= 4) {
-        short[code] = {region, location}
+        short[code] = {r: region, l: location}
       } else {
-        long[code] = {region, location}
+        long[code] = {r: region, l: location}
       }
     }
   }, {concurrency: 20})
