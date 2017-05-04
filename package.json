@@ -1,6 +1,6 @@
 {
   "name": "areacode-king",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "World's most advanced area code parser. Parse US area codes to regions.",
   "main": "index.js",
   "scripts": {

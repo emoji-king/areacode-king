@@ -1,6 +1,6 @@
 const areacodemap = require('../lib/areacode-map')
 
-function parse(number) {
+function parseExtended(number) {
   if (number.startsWith('+1')) {
     number = number.slice(2)
   } else if (number.startsWith('1')) {
@@ -15,4 +15,10 @@ function parse(number) {
   }
 }
 
-module.exports = { parse }
+function parse(number) {
+  const res = parseExtended(number)
+  if (res) { return res.r }
+  return undefined
+}
+
+module.exports = { parse, parseExtended }
